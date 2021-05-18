@@ -9,38 +9,6 @@
         },
     ],
     "powershell.codeFormatting.preset": "OTBS",
-    "terminals.terminals": [
-        {
-            "name": "Powershell",
-            "shellPath": "powershell.exe",
-            "shellArgs": [
-                "-NoLogo",
-                "-NoExit",
-            ],
-            "focus": true,
-            "open": true,
-        },
-        {
-            "name": "Powershell Core",
-            "shellPath": "pwsh.exe",
-            "shellArgs": [
-                "-NoLogo",
-                "-NoExit",
-            ],
-            "focus": true,
-            "open": true,
-        },
-        {
-            "name": "Powershell Core (Preview)",
-            "shellPath": "pwsh-preview.exe",
-            "shellArgs": [
-                "-NoLogo",
-                "-NoExit",
-            ],
-            "focus": true,
-            "open": true,
-        },
-    ],
     "yaml.format.bracketSpacing": true,
     "yaml.format.enable": true,
     "yaml.format.singleQuote": true,

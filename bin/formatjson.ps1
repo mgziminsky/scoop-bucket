@@ -1,25 +1,35 @@
 <#
 .SYNOPSIS
-    Format manifests using scoop's formatter.
+    Format manifest.
 .PARAMETER App
-    Manifest name.
+    Specifies the manifest name.
+    Wildcards are supported.
 .PARAMETER Dir
-    Where to search for manifests.
-    Default to bucket folder.
+    Specifies the location of manifests.
+.EXAMPLE
+    PS BUCKETROOT> .\bin\formatjson.ps1
+    Format all manifests inside bucket directory.
+.EXAMPLE
+    PS BUCKETROOT> .\bin\formatjson.ps1 7zip
+    Format manifest '7zip' inside bucket directory.
 #>
 param(
-    [Parameter(ValueFromPipeline = $true)]
-    [Alias('App')]
-    [String[]] $Manifest = '*',
-    [ValidateScript( { if ( Test-Path $_ -Type Container) { $true } else { $false } })]
-    [String] $Dir = "$PSScriptRoot\..\bucket"
+    [SupportsWildcards()]
+    [String] $App = '*',
+    [Parameter(Mandatory)]
+    [ValidateScript( {
+            if (!(Test-Path $_ -Type 'Container')) { throw "$_ is not a directory!" }
+            $true
+        })]
+    [String] $Dir
 )
 
-begin {
-    if (-not $env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
-    $Dir = Resolve-Path $Dir
+'Helpers' | ForEach-Object {
+    . (Join-Path $PSScriptRoot "..\lib\$_.ps1")
 }
 
-process { foreach ($man in $Manifest) { Invoke-Expression -Command "$env:SCOOP_HOME\bin\formatjson.ps1 -App ""$man"" -Dir ""$Dir""" } }
+Write-UserMessage -Message 'Binary ''formatjson'' is deprecated and will be removed in near future. Use ''format'' instead' -Warning
 
-end { Write-Host 'DONE' -ForegroundColor Yellow }
+& (Join-Path $PSScriptRoot 'format.ps1') -App $App -Dir $Dir
+
+exit $LASTEXITCODE

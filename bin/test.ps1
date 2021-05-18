@@ -1,8 +1,3 @@
-<#
-.SYNOPSIS
-    Execute Pester tests in repository root directory.
-#>
+Invoke-Pester "$PSScriptRoot\..\test"
 
-$result = Invoke-Pester "$PSScriptRoot\.." -PassThru
-
-exit $result.FailedCount
+exit $LASTEXITCODE
