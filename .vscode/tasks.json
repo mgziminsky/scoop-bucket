@@ -5,8 +5,12 @@
             "SCOOP_DEBUG": "true",
         },
         "shell": {
+            "executable": "pwsh",
             "args": [
-                "-NoProfile"
+                "-NoProfile",
+                "-Command",
+                "scoop",
+                "utils",
             ]
         }
     },
@@ -19,11 +23,10 @@
             "label": "Check version (Whole repository)",
             "detail": "Execute checkver for each manifests ini each folder inside repository.",
             "type": "shell",
-            "command": ".\\task_helper.ps1",
+            "command": "checkver",
             "args": [
-                "bin\\checkver.ps1",
-                "-Dir",
-                "bucket"
+                "--additional-options",
+                "-Update",
             ],
             "group": "test"
         },
@@ -31,49 +34,40 @@
             "label": "Checkhashes Update",
             "detail": "Check hashes of currently opened manifest.",
             "type": "shell",
-            "command": ".\\task_helper.ps1",
+            "command": "checkhashes",
             "args": [
-                "bin\\checkhashes.ps1",
-                "-App",
-                "${fileBasenameNoExtension}",
-                "-Dir",
-                "${relativeFileDirname}",
-                "-Update"
+                "${file}",
+                "--additional-options",
+                "-Update",
+                "-Force"
             ]
         },
         {
             "label": "Checkver Update",
             "detail": "Check version of currently opened manifest.",
             "type": "shell",
-            "command": ".\\task_helper.ps1",
+            "command": "checkver",
             "args": [
-                "bin\\checkver.ps1",
-                "-App",
-                "${fileBasenameNoExtension}",
-                "-Dir",
-                "${relativeFileDirname}",
-                "-Update"
+                "${file}",
+                "--additional-options",
+                "-Update",
+                "-Force"
             ]
         },
         {
             "label": "Missing Checkver",
             "detail": "Check if manifests have checkver",
             "type": "shell",
-            "command": ".\\task_helper.ps1",
-            "args": [
-                "bin\\missing-checkver.ps1",
-                "-Dir",
-                "bucket"
-            ],
+            "command": "missing-checkver",
             "group": "test"
         },
         {
             "label": "Push Auto-PR",
             "detail": "Execute checkver and push updated manifests.",
             "type": "shell",
-            "command": ".\\task_helper.ps1",
+            "command": "auto-pr",
             "args": [
-                "bin\\auto-pr.ps1",
+                "--additional-options",
                 "-Push"
             ]
         },
@@ -104,7 +98,7 @@
             "command": "scoop",
             "args": [
                 "uninstall",
-                "${fileBasenameNoExtension}",
+                "${file}",
                 "-p"
             ]
         },
@@ -115,7 +109,7 @@
             "command": "scoop",
             "args": [
                 "update",
-                "${fileBasenameNoExtension}",
+                "${file}",
                 "-f"
             ],
             "runOptions": {
