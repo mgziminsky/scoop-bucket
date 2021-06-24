@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Excavator
-        uses: Ash258/Scoop-GithubActions@stable-win
+        uses: mgziminsky/Scoop-GithubActions@main-win
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHOVEL: '1'
