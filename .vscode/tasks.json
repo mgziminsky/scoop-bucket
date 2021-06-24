@@ -10,7 +10,6 @@
                 "-NoProfile",
                 "-Command",
                 "scoop",
-                "utils",
             ]
         }
     },
@@ -23,8 +22,9 @@
             "label": "Check version (Whole repository)",
             "detail": "Execute checkver for each manifests ini each folder inside repository.",
             "type": "shell",
-            "command": "checkver",
+            "command": "utils",
             "args": [
+                "checkver",
                 "--additional-options",
                 "-Update",
             ],
@@ -34,8 +34,9 @@
             "label": "Checkhashes Update",
             "detail": "Check hashes of currently opened manifest.",
             "type": "shell",
-            "command": "checkhashes",
+            "command": "utils",
             "args": [
+                "checkhashes",
                 "${file}",
                 "--additional-options",
                 "-Update",
@@ -46,8 +47,9 @@
             "label": "Checkver Update",
             "detail": "Check version of currently opened manifest.",
             "type": "shell",
-            "command": "checkver",
+            "command": "utils",
             "args": [
+                "checkver",
                 "${file}",
                 "--additional-options",
                 "-Update",
@@ -58,15 +60,19 @@
             "label": "Missing Checkver",
             "detail": "Check if manifests have checkver",
             "type": "shell",
-            "command": "missing-checkver",
-            "group": "test"
+            "command": "utils",
+            "args": [
+                "missing-checkver"
+            ],
+            "group": "test",
         },
         {
             "label": "Push Auto-PR",
             "detail": "Execute checkver and push updated manifests.",
             "type": "shell",
-            "command": "auto-pr",
+            "command": "utils",
             "args": [
+                "auto-pr",
                 "--additional-options",
                 "-Push"
             ]
@@ -75,9 +81,8 @@
             "label": "Scoop Install",
             "detail": "Install currently opened manifest.",
             "type": "shell",
-            "command": "scoop",
+            "command": "install",
             "args": [
-                "install",
                 "${file}"
             ]
         },
@@ -95,22 +100,20 @@
             "label": "Scoop Uninstall Purge",
             "detail": "Uninstall currently opened manifest and remove persisted data.",
             "type": "shell",
-            "command": "scoop",
+            "command": "uninstall",
             "args": [
-                "uninstall",
-                "${file}",
-                "-p"
+                "-p",
+                "${fileBasenameNoExtension}",
             ]
         },
         {
             "label": "Scoop Update Forced",
             "detail": "Update currently opened manifest.",
             "type": "shell",
-            "command": "scoop",
+            "command": "update",
             "args": [
-                "update",
-                "${file}",
-                "-f"
+                "-f",
+                "${fileBasenameNoExtension}",
             ],
             "runOptions": {
                 "reevaluateOnRerun": false

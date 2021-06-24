@@ -14,12 +14,7 @@
         }
     },
     "extract_dir": "Mumble",
-    "pre_install": [
-        "Test-Persistence 'mumble.ini'",
-        "Test-Persistence 'mumble.sqlite'",
-        "Test-Persistence 'murmur.ini'",
-        "Test-Persistence 'murmur.sqlite'"
-    ],
+    "pre_install": "Test-Persistence ('mumble.ini','mumble.sqlite','murmur.sqlite')",
     "bin": [
         "mumble.exe",
         "murmur.exe"
