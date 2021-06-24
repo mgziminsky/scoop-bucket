@@ -40,10 +40,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win64_portable-$version.zip"
+                "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win64_portable_$version.zip"
             },
             "32bit": {
-                "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win32_portable-$version.zip"
+                "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win32_portable_$version.zip"
             }
         }
     }
