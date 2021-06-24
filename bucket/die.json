@@ -1,20 +1,18 @@
 {
-    "version": "3.01",
+    "version": "3.02",
     "description": "Detect It Easy, or abbreviated \"DIE\", is a program for determining types of files",
     "homepage": "http://ntinfo.biz",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.01/die_win64_portable_3.01.zip",
-            "hash": "65B7731D23C34CEE5D2EDBDC0D02CAF2D9363BE41CE1D1C2B0D23534B99EBD10",
+            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.02/die_win64_portable_3.02.zip",
+            "hash": "1ffd192e0f8120691e5c2c018c05245c6761d8aa01695807257044c82a676f27",
             "extract_dir": "die_win64_portable"
-
         },
         "32bit": {
-            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.01/die_win32_portable_3.01.zip",
-            "hash": "4274DC088543216F6305414BC1B46D56EA51E6A952CB657684753755541DC8B6",
+            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.02/die_win32_portable_3.02.zip",
+            "hash": "00e01b28e50d32673d59d09f1e33457639a722aabec9f12c832e738e104fdf5b",
             "extract_dir": "die_win32_portable"
-
         }
     },
     "pre_install": "Copy-Item \"$persist_dir\\die.ini\" \"$dir\" -ErrorAction SilentlyContinue",
