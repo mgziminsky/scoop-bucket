@@ -1,0 +1,34 @@
+{
+    "version": "1.14.3",
+    "description": "Lightweight application that checks for NVIDIA GPU drivers",
+    "homepage": "https://github.com/ElPumpo/TinyNvidiaUpdateChecker",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/ElPumpo/TinyNvidiaUpdateChecker/releases/download/v1.14.3/TinyNvidiaUpdateChecker.v1.14.3.exe#/tnuc.exe",
+    "hash": "d158e7d50d6b6a38db623c94c48d6ac186bf5de71485c86ce65a6caf9bff54ee",
+    "bin": [
+        [
+            "tnuc.exe",
+            "tnuc",
+            "--config-here"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "tnuc.exe",
+            "Tiny Nvidia Update Checker",
+            "--config-here"
+        ]
+    ],
+    "pre_install": "Test-Persistence 'tnuc.exe.config' -Content @('<?xml version=\"1.0\" encoding=\"utf-8\"?>', '<configuration/>')",
+    "uninstaller": {
+        "script": [
+            "ensure '$persist_dir' | Out-Null",
+            "Copy-Item '$dir\\tnuc.exe.config' '$persist_dir' -ErrorAction SilentlyContinue -Force"
+        ]
+    },
+    "persist": "tnuc.exe.config",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ElPumpo/TinyNvidiaUpdateChecker/releases/download/v$version/TinyNvidiaUpdateChecker.v$version.exe#/tnuc.exe"
+    }
+}
