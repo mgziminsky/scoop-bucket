@@ -1,0 +1,33 @@
+{
+    "version": "3.7.0.8",
+    "homepage": "https://www.w10privacy.de",
+    "license": "Freeware",
+    "url": "https://www.w10privacy.de/app/download/12302828636/W10Privacy.zip?t=1622718931",
+    "hash": "acd13b182063e7640604111d516f4ba78f123a603b675511f9d851587a4ca6c0",
+    "bin": "w10privacy.exe",
+    "shortcuts": [
+        [
+            "w10privacy.exe",
+            "W10 Privacy"
+        ]
+    ],
+    "pre_install": "Test-Persistence ('w10privacy.ini', 'cache.ini')",
+    "installer": {
+        "script": "Expand-7zipArchive -Removal -Switches w10privacy.exe -Path \"$dir\\w10privacy $version setup.exe\""
+    },
+    "persist": [
+        "cache.ini",
+        "w10privacy.ini"
+    ],
+    "checkver": {
+        "url": "https://www.w10privacy.de/deutsch-start/download",
+        "regex": "(?s)class=\"j-m-dowload\" href=\"/(?<path>.*?)\".*current version: v.(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.w10privacy.de/$matchPath",
+        "hash": {
+            "url": "https://www.w10privacy.de/deutsch-start/download",
+            "regex": "SHA256-Hash.*: $sha256"
+        }
+    }
+}
