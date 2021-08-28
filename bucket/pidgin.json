@@ -1,0 +1,33 @@
+{
+    "version": "2.14.6",
+    "description": "Chat program which lets you log into accounts on multiple chat networks simultaneously",
+    "homepage": "https://pidgin.im/",
+    "license": "GPL-2.0-or-later",
+    "url": "https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.6/pidgin-2.14.6-offline.exe#/dl.7z",
+    "hash": "sha1:e06b96474b5768059f22472660f3a5f45a8fe98a",
+    "bin": "pidgin.exe",
+    "shortcuts": [
+        [
+            "pidgin.exe",
+            "Pidgin"
+        ]
+    ],
+    "env_set": {
+        "PURPLEHOME": "$dir"
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\.purple\") -and (Test-Path \"$env:Appdata\\.purple\")) {",
+        "    Write-Host -F yellow \"Copying old '$env:Appdata\\.purple' to '$persist_dir\\.purple'\"",
+        "    Copy-Item \"$env:Appdata\\.purple\" \"$persist_dir\\.purple\" -Recurse -Force",
+        "}"
+    ],
+    "installer": {
+        "script": "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\gtk.zip\" -DestinationPath \"$dir\""
+    },
+    "post_install": "Remove-Item -Force -Recurse \"$dir\\`$PLUGINSDIR\"",
+    "persist": ".purple",
+    "checkver": "Download ([\\d.]+)",
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/pidgin/files/Pidgin/$version/pidgin-$version-offline.exe#/dl.7z"
+    }
+}
