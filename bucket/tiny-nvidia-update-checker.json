@@ -22,8 +22,8 @@
     "pre_install": "Test-Persistence 'tnuc.exe.config' -Content @('<?xml version=\"1.0\" encoding=\"utf-8\"?>', '<configuration/>')",
     "uninstaller": {
         "script": [
-            "ensure '$persist_dir' | Out-Null",
-            "Copy-Item '$dir\\tnuc.exe.config' '$persist_dir' -ErrorAction SilentlyContinue -Force"
+            "ensure \"$persist_dir\" | Out-Null",
+            "Copy-Item \"$dir\\tnuc.exe.config\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
         ]
     },
     "persist": "tnuc.exe.config",
