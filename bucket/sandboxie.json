@@ -27,8 +27,8 @@
     ],
     "uninstaller": {
         "script": [
-            "ensure '$persist_dir' | Out-Null",
-            "Copy-Item '$dir\\Sandboxie-Plus.ini' '$persist_dir' -ErrorAction SilentlyContinue -Force"
+            "ensure \"$persist_dir\" | Out-Null",
+            "Copy-Item \"$dir\\Sandboxie-Plus.ini\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
         ]
     },
     "persist": [
