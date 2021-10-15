@@ -1,0 +1,45 @@
+{
+    "version": "1.3.3",
+    "description": "A fully-featured XMPP client",
+    "homepage": "https://gajim.org",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gajim.org/downloads/1.3/Gajim-Portable-1.3.3-64bit-1.exe",
+            "hash": "f6a0526abbc3ddb95e41914b39ad47f096ff59fc5f43f80d968f6206ac6dddf3"
+        },
+        "32bit": {
+            "url": "https://gajim.org/downloads/1.3/Gajim-Portable-1.3.3-32bit-1.exe",
+            "hash": "b80f7780208b5e0e1b5a4ba4e32eff4f1936dc7e160420a4e9b30977daf14ef7"
+        }
+    },
+    "bin": "bin/Gajim.exe",
+    "shortcuts": [
+        [
+            "bin/Gajim.exe",
+            "Gajim"
+        ]
+    ],
+    "persist": "UserData",
+    "installer": {
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "checkver": {
+        "url": "https://gajim.org/download",
+        "regex": "Gajim-Portable-(\\d+(\\.\\d+)*)-64bit-1.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gajim.org/downloads/${majorVersion}.${minorVersion}/Gajim-Portable-$version-64bit-1.exe"
+            },
+            "32bit": {
+                "url": "https://gajim.org/downloads/${majorVersion}.${minorVersion}/Gajim-Portable-$version-32bit-1.exe"
+            }
+        }
+    },
+    "notes": "To avoid conflicting with scoop, auto update should be turned off in the app"
+}
