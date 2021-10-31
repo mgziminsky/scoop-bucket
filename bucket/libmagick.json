@@ -21,8 +21,8 @@
     "depends": "innounp",
     "installer": {
         "script": [
-            "innounp -x -b -y -q -d\"$dir\" -c'{app}' \"$dir\\$fname\" *\\lib\\* *\\include\\* *\\modules\\* CORE_*.dll *.lib ImageMagickObject.dll",
-            "Remove-Item -Force \"$dir\\$fname\""
+            "innounp -x -b -y -q -d\"$dir\" -c'{app}' \"$dir\\$fname\" *\\lib\\* *\\include\\* *\\modules\\* CORE_*.dll *.lib ImageMagickObject.dll *.xml",
+            "Remove-Item @(\"$dir\\$fname\",\"$dir\\www\") -Force -Recurse"
         ]
     },
     "checkver": {
