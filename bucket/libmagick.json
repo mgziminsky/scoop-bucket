@@ -1,0 +1,46 @@
+{
+    "version": "7.1.0-13",
+    "description": "Runtime libs and development headers for the thread-safe, object-oriented C++ interface to ImageMagick",
+    "homepage": "https://imagemagick.org/script/magick++.php",
+    "license": {
+        "identifier": "ImageMagick",
+        "url": "https://imagemagick.org/script/license.php"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-13-Q16-x64-dll.exe",
+            "hash": "977956fbc3cafedee057822d84a97a28cf879cb4d02b004e1827872680074dd7"
+        },
+        "32bit": {
+            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-13-Q16-x86-dll.exe",
+            "hash": "8e3f74ec048420ba45aa8d81e45e01fca2f02684b89a2187410d68182693c95c"
+        }
+    },
+    "env_add_path": ".",
+    "##": "Custom innounp install command to filter extracted files",
+    "depends": "innounp",
+    "installer": {
+        "script": [
+            "innounp -x -b -y -q -d\"$dir\" -c'{app}' \"$dir\\$fname\" *\\lib\\* *\\include\\* *\\modules\\* CORE_*.dll *.lib ImageMagickObject.dll",
+            "Remove-Item -Force \"$dir\\$fname\""
+        ]
+    },
+    "checkver": {
+        "url": "https://imagemagick.org/",
+        "regex": "The current release is ImageMagick <a.*?>([\\d.p-]+)</a>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.imagemagick.org/download/binaries/ImageMagick-$version-Q16-x64-dll.exe"
+            },
+            "32bit": {
+                "url": "https://www.imagemagick.org/download/binaries/ImageMagick-$version-Q16-x86-dll.exe"
+            }
+        },
+        "hash": {
+            "mode": "rdf",
+            "url": "https://www.imagemagick.org/download/binaries/digest.rdf"
+        }
+    }
+}
