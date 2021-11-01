@@ -17,6 +17,9 @@
         }
     },
     "env_add_path": ".",
+    "env_set": {
+        "MAGICK_CODER_MODULE_PATH": "$dir\\modules\\coders"
+    },
     "##": "Custom innounp install command to filter extracted files",
     "depends": "innounp",
     "installer": {
