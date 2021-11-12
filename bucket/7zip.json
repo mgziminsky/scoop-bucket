@@ -1,5 +1,5 @@
 {
-    "version": "19.00",
+    "version": "21.04",
     "description": "A multi-format file archiver with high compression ratios",
     "homepage": "https://www.7-zip.org/",
     "license": {
@@ -10,24 +10,24 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://7-zip.org/a/7z1900-x64.msi",
+                "https://7-zip.org/a/7z2104-x64.msi",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/install-context.reg",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/uninstall-context.reg"
             ],
             "hash": [
-                "a7803233eedb6a4b59b3024ccf9292a6fffb94507dc998aa67c5b745d197a5dc",
+                "bd3279095e3260b3857e8afac40f8c87d6e37df14b9a6dd9a01a7816b32fca73",
                 "358c8a2f87c4dc89c86ee4c72c71766856da146c0a8840001e6821fe5bb0c7ca",
                 "667ef7b5c7bfb6cdcc595042ac6c0cae802fbfd59fc601b22b533f6f1bcaf374"
             ]
         },
         "32bit": {
             "url": [
-                "https://7-zip.org/a/7z1900.msi",
+                "https://7-zip.org/a/7z2104.msi",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/install-context.reg",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/uninstall-context.reg"
             ],
             "hash": [
-                "b49d55a52bc0eab14947c8982c413d9be141c337da1368a24aa0484cbb5e89cd",
+                "88bfc660c094cd5805089789ef7edd6d1869bc682af8aa88475b5e2c853b71cb",
                 "358c8a2f87c4dc89c86ee4c72c71766856da146c0a8840001e6821fe5bb0c7ca",
                 "667ef7b5c7bfb6cdcc595042ac6c0cae802fbfd59fc601b22b533f6f1bcaf374"
             ]
@@ -57,8 +57,8 @@
         "Formats"
     ],
     "checkver": {
-        "url": "https://www.7-zip.org/download.html",
-        "regex": "Download 7-Zip ([\\d.]+)"
+        "url": "https://www.7-zip.org/history.txt",
+        "regex": "(?m)^([\\d.]+)\\s.*?\\d{4}-\\d{2}-\\d{2}\\s+^-----"
     },
     "autoupdate": {
         "architecture": {
