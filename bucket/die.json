@@ -1,17 +1,17 @@
 {
-    "version": "3.02",
+    "version": "3.03",
     "description": "Detect It Easy, or abbreviated \"DIE\", is a program for determining types of files",
     "homepage": "http://ntinfo.biz",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.02/die_win64_portable_3.02.zip",
-            "hash": "1ffd192e0f8120691e5c2c018c05245c6761d8aa01695807257044c82a676f27",
+            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.03/die_win64_portable_3.03.zip",
+            "hash": "f793c8ea4578cafca7543fe407f03ac50ac15850e99983f1cc5ee19b0dda7c78",
             "extract_dir": "die_win64_portable"
         },
         "32bit": {
-            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.02/die_win32_portable_3.02.zip",
-            "hash": "00e01b28e50d32673d59d09f1e33457639a722aabec9f12c832e738e104fdf5b",
+            "url": "https://github.com/horsicq/DIE-engine/releases/download/3.03/die_win32_portable_3.03.zip",
+            "hash": "0ce1787066ae2bad2d160aa76a2bb0f188b978b099643b15c8b0c7b58594cc1b",
             "extract_dir": "die_win32_portable"
         }
     },
