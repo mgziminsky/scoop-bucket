@@ -6,16 +6,14 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/horsicq/DIE-engine/releases/download/3.03/die_win64_portable_3.03.zip",
-            "hash": "f793c8ea4578cafca7543fe407f03ac50ac15850e99983f1cc5ee19b0dda7c78",
-            "extract_dir": "die_win64_portable"
+            "hash": "f793c8ea4578cafca7543fe407f03ac50ac15850e99983f1cc5ee19b0dda7c78"
         },
         "32bit": {
             "url": "https://github.com/horsicq/DIE-engine/releases/download/3.03/die_win32_portable_3.03.zip",
-            "hash": "0ce1787066ae2bad2d160aa76a2bb0f188b978b099643b15c8b0c7b58594cc1b",
-            "extract_dir": "die_win32_portable"
+            "hash": "0ce1787066ae2bad2d160aa76a2bb0f188b978b099643b15c8b0c7b58594cc1b"
         }
     },
-    "pre_install": "Copy-Item \"$persist_dir\\die.ini\" \"$dir\" -ErrorAction SilentlyContinue",
+    "pre_install": "Test-Persistence die.ini",
     "uninstaller": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
@@ -31,6 +29,9 @@
             "die.exe",
             "Detect It Easy"
         ]
+    ],
+    "persist": [
+        "die.ini"
     ],
     "checkver": {
         "github": "https://github.com/horsicq/DIE-engine"
