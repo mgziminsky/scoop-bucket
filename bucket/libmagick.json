@@ -1,5 +1,5 @@
 {
-    "version": "7.1.0-13",
+    "version": "7.1.0-14",
     "description": "Runtime libs and development headers for the thread-safe, object-oriented C++ interface to ImageMagick",
     "homepage": "https://imagemagick.org/script/magick++.php",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-13-Q16-x64-dll.exe",
-            "hash": "977956fbc3cafedee057822d84a97a28cf879cb4d02b004e1827872680074dd7"
+            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-14-Q16-x64-dll.exe",
+            "hash": "2d8f8a7c14d7520cf92ff44e0d28398b6f96487d76e898d02632cb4b5e0c3c8b"
         },
         "32bit": {
-            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-13-Q16-x86-dll.exe",
-            "hash": "8e3f74ec048420ba45aa8d81e45e01fca2f02684b89a2187410d68182693c95c"
+            "url": "https://www.imagemagick.org/download/binaries/ImageMagick-7.1.0-14-Q16-x86-dll.exe",
+            "hash": "35027661cb01672e1fa3ae802bc77551714bcc3eba3bf187fcf953bff01fc542"
         }
     },
     "env_add_path": ".",
