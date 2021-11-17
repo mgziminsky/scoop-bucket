@@ -1,17 +1,17 @@
 {
-    "version": "0.9.8d",
+    "version": "1.0.0",
     "description": "A sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems",
     "homepage": "https://sandboxie-plus.com/",
     "license": "GPL-3.0-or-later",
     "innosetup": true,
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/0.9.8d/Sandboxie-Plus-x64-v0.9.8.4.exe",
-            "hash": "b8a325d5f7fc88c2ce7ce9a9375851e8ce88221087e9e6236083743080ffb523"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/1.0.0/Sandboxie-Plus-x64-v1.0.0.exe",
+            "hash": "79ef62c09e06d3915587f815062533428b2f79f83e1280c60cf6d369cfa8f8f5"
         },
         "32bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/0.9.8d/Sandboxie-Plus-x86-v0.9.8.4.exe",
-            "hash": "0573395556935b54a714be7eff81b903bac4d442ccb3bd1f76a264095bbde5ca"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/1.0.0/Sandboxie-Plus-x86-v1.0.0.exe",
+            "hash": "e481ce3d1cd8a26128e880894623f03f74c00fe6ff26694f15649972e714c1ae"
         }
     },
     "bin": "SandMan.exe",
