@@ -9,7 +9,7 @@
             "args": [
                 "-NoProfile",
                 "-Command",
-                "scoop",
+                "shovel",
             ]
         }
     },
@@ -124,6 +124,11 @@
             "detail": "Execute Pester tests in repository root directory.",
             "type": "shell",
             "command": "${workspaceFolder}\\Bucket.Tests.ps1",
+            "options": {
+                "shell": {
+                    "args": []
+                },
+            },
             "group": "test"
         }
     ],

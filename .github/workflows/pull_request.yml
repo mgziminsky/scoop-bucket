@@ -8,8 +8,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@main
-      - name: Pull Request Validator
-        uses: Ash258/Scoop-GithubActions@stable-win
+      - name: Pull Request Validation
+        uses: shovel-org/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHOVEL: '1'
