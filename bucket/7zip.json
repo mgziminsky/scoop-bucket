@@ -1,5 +1,5 @@
 {
-    "version": "21.04",
+    "version": "21.06",
     "description": "A multi-format file archiver with high compression ratios",
     "homepage": "https://www.7-zip.org/",
     "license": {
@@ -10,24 +10,24 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://7-zip.org/a/7z2104-x64.msi",
+                "https://7-zip.org/a/7z2106-x64.msi",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/install-context.reg",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/uninstall-context.reg"
             ],
             "hash": [
-                "bd3279095e3260b3857e8afac40f8c87d6e37df14b9a6dd9a01a7816b32fca73",
+                "3a18c7ed102778c1735def84d88c1abeec6919436aee4c4d852acaea90101dd7",
                 "358c8a2f87c4dc89c86ee4c72c71766856da146c0a8840001e6821fe5bb0c7ca",
                 "667ef7b5c7bfb6cdcc595042ac6c0cae802fbfd59fc601b22b533f6f1bcaf374"
             ]
         },
         "32bit": {
             "url": [
-                "https://7-zip.org/a/7z2104.msi",
+                "https://7-zip.org/a/7z2106.msi",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/install-context.reg",
                 "https://raw.githubusercontent.com/ScoopInstaller/Main/master/scripts/7-zip/uninstall-context.reg"
             ],
             "hash": [
-                "88bfc660c094cd5805089789ef7edd6d1869bc682af8aa88475b5e2c853b71cb",
+                "68a38ecca0643f55eff55e6c5cc22bb89b4763a5cfdc68fd53b06f50da10ed5d",
                 "358c8a2f87c4dc89c86ee4c72c71766856da146c0a8840001e6821fe5bb0c7ca",
                 "667ef7b5c7bfb6cdcc595042ac6c0cae802fbfd59fc601b22b533f6f1bcaf374"
             ]
