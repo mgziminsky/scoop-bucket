@@ -20,19 +20,14 @@
             "Copy-Item \"$dir\\die.ini\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
         ]
     },
-    "bin": [
-        "die.exe",
-        "diec.exe"
-    ],
+    "bin": "diec.exe",
     "shortcuts": [
         [
             "die.exe",
             "Detect It Easy"
         ]
     ],
-    "persist": [
-        "die.ini"
-    ],
+    "persist": "die.ini",
     "checkver": {
         "github": "https://github.com/horsicq/DIE-engine"
     },
