@@ -103,7 +103,7 @@
             "command": "uninstall",
             "args": [
                 "-p",
-                "${workspaceFolderBasename}/${fileBasenameNoExtension}",
+                "${fileBasenameNoExtension}",
             ]
         },
         {
@@ -113,7 +113,7 @@
             "command": "update",
             "args": [
                 "-f",
-                "${workspaceFolderBasename}/${fileBasenameNoExtension}",
+                "${fileBasenameNoExtension}",
             ],
             "runOptions": {
                 "reevaluateOnRerun": false
