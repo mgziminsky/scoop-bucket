@@ -5,7 +5,7 @@
     "license": "MPL-2.0",
     "url": "https://gitlab.com/librewolf-community/browser/windows/uploads/956b4226c9ba3a07129951a269f74189/librewolf-96.0.1.1.en-US.win64.zip",
     "hash": "2978a2890d92784edc62b2bd10d9512b77d0e9526d15016373dd2a695fd45c08",
-    "extract_dir": "librewolf-96.0.1.1/LibreWolf",
+    "extract_dir": "librewolf-96.0.1/LibreWolf",
     "bin": [
         [
             "librewolf.exe",
@@ -28,7 +28,7 @@
     },
     "autoupdate": {
         "url": "$matchUrl",
-        "extract_dir": "librewolf-$version/LibreWolf",
+        "extract_dir": "librewolf-$matchHead/LibreWolf",
         "hash": {
             "url": "$matchHashurl"
         }
