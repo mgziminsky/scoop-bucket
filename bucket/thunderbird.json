@@ -28,6 +28,23 @@
             "-profile \"$dir\\profile\""
         ]
     ],
+    "post_install": [
+        "$app = \"$dir\\thunderbird.exe\".Replace('\\', '\\\\')",
+        "$shim = \"$(shimdir)\\thunderbird.exe\".Replace('\\', '\\\\')",
+        "$scripts = join-path $bucketsdir $($ResolvedObject.Bucket) | join-path -ChildPath scripts/thunderbird",
+        "'install-associations', 'uninstall-associations' | ForEach-Object {",
+        "  if (Test-Path \"$scripts\\$_.reg\") {",
+        "    $content = Get-Content \"$scripts\\$_.reg\"",
+        "    $content = $content.Replace('$app', $app)",
+        "    $content = $content.Replace('$dir', $dir)",
+        "    $content = $content.Replace('$shim', $shim)",
+        "    if ($global) {",
+        "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    $content | Set-Content -Path \"$dir\\$_.reg\"",
+        "  }",
+        "}"
+    ],
     "persist": "profile",
     "checkver": {
         "url": "https://www.thunderbird.net/thunderbird/all/",
