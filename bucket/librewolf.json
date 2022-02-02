@@ -1,6 +1,6 @@
 {
     "version": "96.0.3",
-    "description": "A fork of Firefox, focused on privacy, security and freedom.",
+    "description": "An independent fork of Firefox, with the primary goals of privacy, security and user freedom.",
     "homepage": "https://librewolf-community.gitlab.io/",
     "license": "MPL-2.0",
     "url": "https://gitlab.com/librewolf-community/browser/windows/uploads/5619a0f68ce8ebafd66bbbe2c655505c/librewolf-96.0.3.en-US.win64.zip",
