@@ -34,8 +34,10 @@
         "    }",
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "  }",
-        "}"
+        "}",
+        "REG IMPORT \"$dir\\install-associations.reg\" *>&1 | Out-Null"
     ],
+    "pre_uninstall": "REG IMPORT \"$dir\\uninstall-associations.reg\" *>&1 | Out-Null",
     "persist": "profiles",
     "checkver": {
         "url": "https://gitlab.com/api/v4/projects/13852981/releases",

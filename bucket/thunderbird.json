@@ -43,8 +43,10 @@
         "    }",
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "  }",
-        "}"
+        "}",
+        "REG IMPORT \"$dir\\install-associations.reg\" *>&1 | Out-Null"
     ],
+    "pre_uninstall": "REG IMPORT \"$dir\\uninstall-associations.reg\" *>&1 | Out-Null",
     "persist": "profile",
     "checkver": {
         "url": "https://www.thunderbird.net/thunderbird/all/",
