@@ -1,10 +1,10 @@
 {
-    "version": "1.4.4",
+    "version": "1.4.5",
     "description": "A fully-featured XMPP client",
     "homepage": "https://gajim.org",
     "license": "GPL-3.0-or-later",
-    "url": "https://gajim.org/downloads/1.4/Gajim-Portable-1.4.4-64bit.exe",
-    "hash": "9830ae34ee4af312b01a6d5b430e5bb0b54244f0cafbf9a2a6b89971eebaedbd",
+    "url": "https://gajim.org/downloads/1.4/Gajim-Portable-1.4.5-64bit.exe",
+    "hash": "cee1583067f54d792b8af366ce3c48bd173706e05e329f82bb135d24daf4c864",
     "bin": "bin/Gajim.exe",
     "shortcuts": [
         [
