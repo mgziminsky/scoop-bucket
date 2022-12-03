@@ -1,9 +1,9 @@
 {
-    "version": "4.1.0.0",
+    "version": "4.1.1.0",
     "homepage": "https://www.w10privacy.de",
     "license": "Freeware",
-    "url": "https://www.w10privacy.de/app/download/12302828636/W10Privacy.zip?t=1669225339",
-    "hash": "5ac1a69260e7fa8a5d3678cbd9f8f643144daf95642bdf232ee01a2ae8bb5ece",
+    "url": "https://www.w10privacy.de/app/download/12302828636/W10Privacy.zip?t=1670056258",
+    "hash": "6ce1aa9887f4c56b57a62b9d25d4b8cc8a434fb58b740207e5c94fbcd7ca6890",
     "bin": "w10privacy.exe",
     "shortcuts": [
         [
