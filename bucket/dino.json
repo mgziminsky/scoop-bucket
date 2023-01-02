@@ -1,10 +1,10 @@
 {
-    "version": "0.0.0.8",
+    "version": "0.0.0.9",
     "description": "A modern, open-source, XMPP/Jabber chat client for the desktop",
     "homepage": "https://dino.im/",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/LAGonauta/dino/releases/download/v0.0.0.8/dino-installer-x86_64.exe#dl.7z",
-    "hash": "30f35854d3882997fbd4a9b9c51cbc42820a6e422cd52909f7b829afe65b87b6",
+    "url": "https://github.com/LAGonauta/dino/releases/download/v0.0.0.9/dino-installer-x86_64.exe#dl.7z",
+    "hash": "3f8e7db9d16a6ed38e1dbc7ddf23b34d6f11a09b50971872b55c1cfcf2834bff",
     "shortcuts": [
         [
             "bin/dino.exe",
