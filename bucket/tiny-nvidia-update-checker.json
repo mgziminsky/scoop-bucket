@@ -26,7 +26,7 @@
             "Copy-Item \"$dir\\tnuc.exe.config\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
         ]
     },
-    "persist": "tnuc.exe.config",
+    "persist": "app.config",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ElPumpo/TinyNvidiaUpdateChecker/releases/download/v$version/TinyNvidiaUpdateChecker.v$version.exe#/tnuc.exe"
