@@ -1,10 +1,10 @@
 {
-    "version": "2023-01-26T15_08",
+    "version": "2023-01-26T22_54",
     "description": "A multiplayer voxel RPG written in Rust inspired by games such as Cube World, Legend of Zelda: Breath of the Wild, Dwarf Fortress and Minecraft",
     "homepage": "https://veloren.net/",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/veloren/veloren/releases/download/nightly/nightly-windows-x86_64-2023-01-26T15_08.zip",
-    "hash": "22eb2ac8afbdf28e0e5a3e13612fa388a8523573a5e414d24e955decf9383598",
+    "url": "https://github.com/veloren/veloren/releases/download/nightly/nightly-windows-x86_64-2023-01-26T22_54.zip",
+    "hash": "0674c53fdd20552121953c6a06dec150d9e431429ef6c5b129ebb4212cec3c81",
     "bin": [
         "veloren-server-cli.exe",
         "veloren-voxygen.exe"
