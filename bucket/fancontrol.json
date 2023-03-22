@@ -5,7 +5,6 @@
     "license": "Unknown",
     "url": "https://github.com/Rem0o/FanControl.Releases/raw/V147/FanControl.zip",
     "hash": "7631433d9d0993d1a80fd80e4020dfd1b2cd8f042e224799659946b00b0a2a9d",
-    "pre_install": "Test-Persistence ('userConfig.json') -Content '{}'",
     "shortcuts": [
         [
             "FanControl.exe",
@@ -13,8 +12,8 @@
         ]
     ],
     "persist": [
-        "Plugins",
-        "userConfig.json"
+        "Configurations",
+        "Plugins"
     ],
     "checkver": {
         "github": "https://github.com/Rem0o/FanControl.Releases"
