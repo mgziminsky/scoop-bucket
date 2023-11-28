@@ -7,7 +7,7 @@
         "64bit": {
             "url": "https://github.com/containers/podman/releases/download/v4.8.0/podman-remote-release-windows_amd64.zip",
             "hash": "7889cb2bd8d0d158f38fb7e149db5095b55d4d7ee21727b53c7da88211f72964",
-            "extract_dir": "podman-4.8.0"
+            "extract_dir": "podman-4.8.0-rc1"
         }
     },
     "bin": "usr/bin/podman.exe",
