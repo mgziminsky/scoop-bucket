@@ -2,7 +2,9 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreWolf Scoop]
 
-[-HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf]
 
 [HKEY_CURRENT_USER\SOFTWARE\RegisteredApplications]
 "LibreWolf Scoop"=-

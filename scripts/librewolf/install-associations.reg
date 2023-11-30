@@ -8,7 +8,7 @@ Windows Registry Editor Version 5.00
 "FriendlyAppName"="LibreWolf (Scoop)"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreWolf Scoop\DefaultIcon]
-@="$app,1"
+@="$app,0"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Applications\LibreWolf Scoop\shell\open\command]
 @="\"$shim\" -private-window \"%1\""
@@ -36,21 +36,21 @@ Windows Registry Editor Version 5.00
 "ApplicationName"="LibreWolf (Scoop)"
 
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\LibreWolf Scoop\Capabilities\FileAssociations]
-".htm"="Scoop.LibreWolf.Assoc"
-".html"="Scoop.LibreWolf.Assoc"
-".pdf"="Scoop.LibreWolf.Assoc"
-".shtml"="Scoop.LibreWolf.Assoc"
-".svg"="Scoop.LibreWolf.Assoc"
-".webp"="Scoop.LibreWolf.Assoc"
-".xht"="Scoop.LibreWolf.Assoc"
-".xhtml"="Scoop.LibreWolf.Assoc"
+".htm"="Scoop.LibreWolf.file"
+".html"="Scoop.LibreWolf.file"
+".pdf"="Scoop.LibreWolf.pdf"
+".shtml"="Scoop.LibreWolf.file"
+".svg"="Scoop.LibreWolf.file"
+".webp"="Scoop.LibreWolf.file"
+".xht"="Scoop.LibreWolf.file"
+".xhtml"="Scoop.LibreWolf.file"
 
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\LibreWolf Scoop\Capabilities\StartMenu]
 "StartMenuInternet"="LibreWolf Scoop"
 
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\LibreWolf Scoop\Capabilities\URLAssociations]
-"http"="Scoop.LibreWolf.Assoc"
-"https"="Scoop.LibreWolf.Assoc"
+"http"="Scoop.LibreWolf.url"
+"https"="Scoop.LibreWolf.url"
 
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\LibreWolf Scoop\DefaultIcon]
 @="$app,0"
@@ -71,19 +71,55 @@ Windows Registry Editor Version 5.00
 @="\"$shim\" -safe-mode"
 
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc]
-@="LibreWolf File or URL"
-"FriendlyTypeName"="LibreWolf File or URL"
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file]
+@="LibreWolf File"
+"FriendlyTypeName"="LibreWolf File"
 "EditFlags"=dword:00000002
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc\DefaultIcon]
-@="$app,1"
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file\DefaultIcon]
+@="$app,-2"
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc\shell\open]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file\shell\open]
 "FriendlyAppName"="LibreWolf (Scoop)"
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc\shell\open\command]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file\shell\open\command]
 @="\"$shim\" -private-window \"%1\""
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.Assoc\shell\open\ddeexec]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.file\shell\open\ddeexec]
+@=""
+
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url]
+@="LibreWolf URL"
+"FriendlyTypeName"="LibreWolf URL"
+"EditFlags"=dword:00000002
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url\DefaultIcon]
+@="$app,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url\shell\open]
+"FriendlyAppName"="LibreWolf (Scoop)"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url\shell\open\command]
+@="\"$shim\" -private-window \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.url\shell\open\ddeexec]
+@=""
+
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf]
+@="LibreWolf PDF File"
+"FriendlyTypeName"="LibreWolf PDF File"
+"EditFlags"=dword:00000002
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf\DefaultIcon]
+@="$app,-6"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf\shell\open]
+"FriendlyAppName"="LibreWolf (Scoop)"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf\shell\open\command]
+@="\"$shim\" -private-window \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Scoop.LibreWolf.pdf\shell\open\ddeexec]
 @=""
