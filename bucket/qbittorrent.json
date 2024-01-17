@@ -1,5 +1,5 @@
 {
-    "version": "4.6.2",
+    "version": "4.6.3",
     "description": "Free and reliable P2P Bittorent client.",
     "homepage": "https://www.qbittorrent.org/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.6.2/qbittorrent_4.6.2_lt20_qt6_x64_setup.exe#/dl.7z",
-            "hash": "76ee19e0c623670ea2fd2cff2fa2e2bd3b266e590dad7eec282baa79fca82df4"
+            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.6.3/qbittorrent_4.6.3_lt20_qt6_x64_setup.exe#/dl.7z",
+            "hash": "9b70059d60e7a41864171de2cc76a0367955d56ad5034b8cde1e9c821d3dbae6"
         }
     },
     "pre_install": [
@@ -35,6 +35,7 @@
         "    }",
         "}"
     ],
+    "post_install": "Add-Content -Path \"$dir\\qt.conf\" -Value 'WindowsArguments = darkmode=2'",
     "bin": "qbittorrent.exe",
     "shortcuts": [
         [
