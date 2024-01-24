@@ -1,11 +1,11 @@
 {
-    "version": "121.0-1",
+    "version": "122.0-1",
     "description": "An independent fork of Firefox, with the primary goals of privacy, security and user freedom.",
     "homepage": "https://librewolf-community.gitlab.io/",
     "license": "MPL-2.0",
-    "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/121.0-1/librewolf-121.0-1-windows-x86_64-portable.zip#/librewolf-121.0-1-windows-x86_64-portable.zip",
-    "hash": "a51f7b0ec88ad7a70f5a227617e35c4e996788458de638e56fcbe37726b985f7",
-    "extract_dir": "librewolf-121.0-1/LibreWolf",
+    "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/122.0-1/librewolf-122.0-1-windows-x86_64-portable.zip#/librewolf-122.0-1-windows-x86_64-portable.zip",
+    "hash": "74c0556d659fb7b6a285aab5746d6d3eb85504c708065337b5b46e94bfe218b9",
+    "extract_dir": "librewolf-122.0-1/LibreWolf",
     "bin": [
         [
             "librewolf.exe",
