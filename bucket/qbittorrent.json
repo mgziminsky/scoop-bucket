@@ -45,16 +45,15 @@
     ],
     "persist": "profile",
     "checkver": {
-        "url": "https://www.qbittorrent.org/download.php",
-        "regex": "Latest:\\s+v([\\d.]+)"
+        "sourceforge": "qbittorrent/qbittorrent-win32"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-$version/qbittorrent_$version_lt20_qt6_x64_setup.exe#/dl.7z",
                 "hash": {
-                    "url": "https://www.qbittorrent.org/download.php",
-                    "regex": "$version \\(lt20 qt6\\).*\\s+.*<code>$checksum</code>"
+                    "url": "https://www.fosshub.com/qBittorrent.html",
+                    "regex": "\"$basename\".*?\"sha256\":\\s*\"$checksum\""
                 }
             }
         }
