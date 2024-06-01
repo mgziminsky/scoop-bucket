@@ -18,6 +18,14 @@
     "problemMatcher": [],
     "tasks": [
         {
+            "label": "Format Buckets",
+            "detail": "Format all manifests inside bucket directory",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/formatjson.ps1",
+            "args": [],
+            "group": "test"
+        },
+        {
             "label": "Check version (Whole repository)",
             "detail": "Execute checkver for each manifests ini each folder inside repository.",
             "type": "shell",
@@ -111,14 +119,9 @@
         },
         {
             "label": "Test",
-            "detail": "Execute Pester tests in repository root directory.",
+            "detail": "Execute Pester tests",
             "type": "shell",
-            "command": "${workspaceFolder}\\Scoop-Bucket.Tests.ps1",
-            "options": {
-                "shell": {
-                    "args": []
-                },
-            },
+            "command": "${workspaceFolder}/bin/test.ps1",
             "group": "test"
         }
     ],
