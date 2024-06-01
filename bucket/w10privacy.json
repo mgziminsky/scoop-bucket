@@ -11,7 +11,7 @@
             "W10 Privacy"
         ]
     ],
-    "pre_install": "Test-Persistence ('w10privacy.ini', 'cache.ini')",
+    "pre_install": "New-Item @(\"$persist_dir\\w10privacy.ini\", \"$persist_dir\\cache.ini\") -ErrorAction SilentlyContinue | Out-Null",
     "installer": {
         "script": "Expand-7zipArchive -Removal -Switches w10privacy.exe -Path \"$dir\\w10privacy $version setup.exe\""
     },

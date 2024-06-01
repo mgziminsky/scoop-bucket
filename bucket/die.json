@@ -13,11 +13,11 @@
             "hash": "7cdc3c3e33e23cc04463dc2c463c5d9dd7f746ee5dbacb280657e29b5d75b39a"
         }
     },
-    "pre_install": "Test-Persistence @('die.ini', 'shortcuts.ini')",
+    "pre_install": "New-Item @(\"$persist_dir\\die.ini\", \"$persist_dir\\diel.ini\", \"$persist_dir\\shortcuts.ini\") -ErrorAction SilentlyContinue | Out-Null",
     "uninstaller": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
-            "Copy-Item @(\"$dir\\die.ini\", \"$dir\\shortcuts.ini\") -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+            "Copy-Item @(\"$dir\\die.ini\", \"$dir\\diel.ini\", \"$dir\\shortcuts.ini\") -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
         ]
     },
     "bin": "diec.exe",
@@ -25,10 +25,15 @@
         [
             "die.exe",
             "Detect It Easy"
+        ],
+        [
+            "diel.exe",
+            "Detect It Easy - Lite"
         ]
     ],
     "persist": [
         "die.ini",
+        "diel.ini",
         "shortcuts.ini"
     ],
     "checkver": {

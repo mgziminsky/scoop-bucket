@@ -9,7 +9,6 @@
             "args": [
                 "-NoProfile",
                 "-Command",
-                "shovel",
             ]
         }
     },
@@ -22,11 +21,9 @@
             "label": "Check version (Whole repository)",
             "detail": "Execute checkver for each manifests ini each folder inside repository.",
             "type": "shell",
-            "command": "utils",
+            "command": "${workspaceFolder}/bin/checkver.ps1",
             "args": [
-                "checkver",
-                "--additional-options",
-                "-Update",
+                "${input:pickUpdateType}"
             ],
             "group": "test"
         },
@@ -34,46 +31,36 @@
             "label": "Checkhashes Update",
             "detail": "Check hashes of currently opened manifest.",
             "type": "shell",
-            "command": "utils",
+            "command": "${workspaceFolder}/bin/checkhashes.ps1",
             "args": [
-                "checkhashes",
                 "${file}",
-                "--additional-options",
-                "-Update",
-                "-Force"
+                "-ForceUpdate",
             ]
         },
         {
             "label": "Checkver Update",
             "detail": "Check version of currently opened manifest.",
             "type": "shell",
-            "command": "utils",
+            "command": "${workspaceFolder}/bin/checkver.ps1",
             "args": [
-                "checkver",
                 "${file}",
-                "--additional-options",
-                "-Update",
-                "-Force"
+                "-ForceUpdate",
             ]
         },
         {
             "label": "Missing Checkver",
             "detail": "Check if manifests have checkver",
             "type": "shell",
-            "command": "utils",
-            "args": [
-                "missing-checkver"
-            ],
+            "command": "${workspaceFolder}/bin/missing-checkver.ps1",
+            "args": [],
             "group": "test",
         },
         {
             "label": "Push Auto-PR",
             "detail": "Execute checkver and push updated manifests.",
             "type": "shell",
-            "command": "utils",
+            "command": "${workspaceFolder}/bin/auto-pr.ps1",
             "args": [
-                "auto-pr",
-                "--additional-options",
                 "-Push"
             ]
         },
@@ -81,8 +68,9 @@
             "label": "Scoop Install",
             "detail": "Install currently opened manifest.",
             "type": "shell",
-            "command": "install",
+            "command": "scoop",
             "args": [
+                "install",
                 "${workspaceFolderBasename}/${fileBasenameNoExtension}",
             ]
         },
@@ -100,8 +88,9 @@
             "label": "Scoop Uninstall Purge",
             "detail": "Uninstall currently opened manifest and remove persisted data.",
             "type": "shell",
-            "command": "uninstall",
+            "command": "scoop",
             "args": [
+                "uninstall",
                 "-p",
                 "${fileBasenameNoExtension}",
             ]
@@ -110,8 +99,9 @@
             "label": "Scoop Update Forced",
             "detail": "Update currently opened manifest.",
             "type": "shell",
-            "command": "update",
+            "command": "scoop",
             "args": [
+                "update",
                 "-f",
                 "${fileBasenameNoExtension}",
             ],
@@ -123,7 +113,7 @@
             "label": "Test",
             "detail": "Execute Pester tests in repository root directory.",
             "type": "shell",
-            "command": "${workspaceFolder}\\Bucket.Tests.ps1",
+            "command": "${workspaceFolder}\\Scoop-Bucket.Tests.ps1",
             "options": {
                 "shell": {
                     "args": []
