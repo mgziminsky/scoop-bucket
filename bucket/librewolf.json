@@ -1,11 +1,11 @@
 {
-    "version": "126.0.1-1",
+    "version": "127.0-1",
     "description": "A custom version of Firefox, focused on privacy, security and freedom.",
     "homepage": "https://librewolf.net/",
     "license": "MPL-2.0",
     "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/126.0.1-1/librewolf-126.0.1-1-windows-x86_64-portable.zip#/librewolf-126.0.1-1-windows-x86_64-portable.zip",
-    "hash": "205da66c3b845f591a8ad17ef6fbc9dac5d5c9232059ddec50fd541bb2af1cdc",
-    "extract_dir": "librewolf-126.0.1-1/LibreWolf",
+    "hash": "",
+    "extract_dir": "librewolf-127.0-1/LibreWolf",
     "bin": [
         [
             "librewolf.exe",
