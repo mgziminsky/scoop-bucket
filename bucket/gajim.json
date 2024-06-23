@@ -4,7 +4,7 @@
     "homepage": "https://gajim.org",
     "license": "GPL-3.0-or-later",
     "url": "https://gajim.org/downloads/1.9/Gajim-Portable-1.9.1-64bit.exe",
-    "hash": "fa3874f90d6a1064e2dd7033428595f860f1b6c2e7dc032b9f712fdd4cfeb921",
+    "hash": "fc040b87e572ca3a13e0b361803a17e6cbf5483a11b0f73b43d83b5cd3d9676b",
     "bin": "bin/Gajim.exe",
     "shortcuts": [
         [
