@@ -1,5 +1,5 @@
 {
-    "version": "5.0.0",
+    "version": "5.0.1",
     "description": "Free and reliable P2P Bittorent client.",
     "homepage": "https://www.qbittorrent.org/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.0/qbittorrent_5.0.0_lt20_qt6_x64_setup.exe#/dl.7z",
-            "hash": "858eb057d8bb2d6bef954d4a42d917dab1b8d99049f0d39b9469cc3f1934e6b9"
+            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_qt6_lt20_x64_setup.exe#/dl.7z",
+            "hash": "e0487907256abcae773f2f94739c1e8fb8c3b3dd52783db8c7a093325b917b00"
         }
     },
     "pre_install": [
@@ -50,7 +50,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-$version/qbittorrent_$version_lt20_qt6_x64_setup.exe#/dl.7z",
+                "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-$version/qbittorrent_$version_qt6_lt20_x64_setup.exe#/dl.7z",
                 "hash": {
                     "url": "https://www.fosshub.com/qBittorrent.html",
                     "regex": "\"$basename\".*?\"sha256\":\\s*\"$checksum\""
