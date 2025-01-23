@@ -1,10 +1,10 @@
 {
-    "version": "2.14.13",
+    "version": "2.14.14",
     "description": "Chat program which lets you log into accounts on multiple chat networks simultaneously",
     "homepage": "https://pidgin.im/",
     "license": "GPL-2.0-or-later",
-    "url": "https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe#/dl.7z",
-    "hash": "85b07dcddb160e0861aa4169527309a81e2ab449bf1bb019c7a21673d1c0c76b",
+    "url": "https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.14/pidgin-2.14.14-offline.exe#/dl.7z",
+    "hash": "sha1:3006715193f8dc542d6cb147057ce00d6db321a5",
     "bin": "pidgin.exe",
     "shortcuts": [
         [
